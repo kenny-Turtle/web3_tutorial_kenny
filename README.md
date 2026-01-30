@@ -28,5 +28,17 @@ npx hardhat verify --network sepolia 0x58BD9EA847AD7380348B31506543E3b7bA385BE4 
 国内提示网络问题的话，
 
 
-ethers 6
-获取地址为 fundMe.target
+# ethers 6
+获取地址为 
+fundMe.target
+获取合约实例 （第三个参数不是账户地址，而是默认的signer），
+fundMe = await ethers.getContractAt("FundMe", address,defaultSigner)
+# 其他signer可以通过如下命令获取
+const [defaultSigner, caller] = await ethers.getSigners();
+
+# hardhat-deploy 1.0版本
+获取账户
+const { firstAccount,secondAccount} = await getNamedAccounts()
+
+# 获取hardhat框架的网络信息
+const networkName = network.name

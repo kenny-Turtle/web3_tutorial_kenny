@@ -1,6 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config()
 require("./tasks")
+require("hardhat-deploy")
 
 const RPC_URL = process.env.RPC_URL
 const ACCOUNT_PRIVATE_KEY = process.env.ACCOUNT_PRIVATE_KEY
@@ -10,6 +11,7 @@ const ACCOUNT_PRIVATE_KEY_1 = process.env.ACCOUNT_PRIVATE_KEY_1
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.28",
+  defaultNetwork: "hardhat",
   networks:{
     sepolia:{
       url: RPC_URL,
@@ -19,5 +21,13 @@ module.exports = {
   },
   etherscan:{
     apiKey: ETHERSCAN_API_KEY
+  },
+  namedAccounts:{
+    firstAccount:{
+      default:0
+    },
+    secondAccount:{
+      default:1
+    }
   }
 };

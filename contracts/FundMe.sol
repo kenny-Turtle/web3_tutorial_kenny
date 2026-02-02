@@ -42,7 +42,7 @@ contract FundMe {
             block.timestamp < deploymentTimestamp + lockTime,
             "window is close"
         );
-        require(convertEthToUsd(msg.value) >= MINIMUM_VALUE, "Send more ETH");
+        require(convertEthToUsd(msg.value) >= MINIMUM_VALUE, "send more ETH");
         funders2Amount[msg.sender] += msg.value;
     }
 

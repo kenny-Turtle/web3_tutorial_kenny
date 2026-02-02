@@ -1,8 +1,21 @@
 const DECIMAL = 8
 const INITIAL_ANSWER = 30000000000
+const developmentChains = ["hardhat", "local"]
+const lockTime = 180
+const confirmations = 5
 
+const networkConfig = {
+    11155111: {
+        name: "sepolia",
+        ethUsdPriceFeed: "0x694AA1769357215DE4FAC081bf1f309aDC325306",
+    },
+}
 
 module.exports = {
     DECIMAL,
-    INITIAL_ANSWER
+    INITIAL_ANSWER,
+    developmentChains,
+    networkConfig,
+    lockTime,
+    confirmations,
 }

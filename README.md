@@ -40,5 +40,9 @@ const [defaultSigner, caller] = await ethers.getSigners();
 获取账户
 const { firstAccount,secondAccount} = await getNamedAccounts()
 
-# 获取hardhat框架的网络信息
+# hardhat
+## 获取hardhat框架的网络信息
+const { network } = require("hardhat")
 const networkName = network.name
+## 重新部署合约
+yarn hardhat deploy --network sepolia --reset

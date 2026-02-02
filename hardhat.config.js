@@ -2,6 +2,9 @@ require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config()
 require("./tasks")
 require("hardhat-deploy")
+// require("@nomicfoundation/hardhat-ethers");
+// require("hardhat-deploy-ethers");
+
 
 const RPC_URL = process.env.RPC_URL
 const ACCOUNT_PRIVATE_KEY = process.env.ACCOUNT_PRIVATE_KEY

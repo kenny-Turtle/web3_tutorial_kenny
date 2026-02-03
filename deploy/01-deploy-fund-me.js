@@ -3,7 +3,7 @@ const {
     networkConfig,
     lockTime,
     confirmations,
-} = require("../helper-hardha-config")
+} = require("../helper-hardhat-config")
 const { network } = require("hardhat")
 
 // function deployFunction(){

@@ -1,4 +1,4 @@
-const { DECIMAL, INITIAL_ANSWER ,developmentChains} = require("../helper-hardha-config")
+const { DECIMAL, INITIAL_ANSWER ,developmentChains} = require("../helper-hardhat-config")
 
 module.exports = async ({ deployments, getNamedAccounts }) => {
     const { firstAccount, secondAccount } = await getNamedAccounts()

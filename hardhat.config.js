@@ -1,3 +1,5 @@
+const { time } = require("@nomicfoundation/hardhat-network-helpers");
+
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config()
 require("./tasks")
@@ -15,6 +17,9 @@ const ACCOUNT_PRIVATE_KEY_1 = process.env.ACCOUNT_PRIVATE_KEY_1
 module.exports = {
   solidity: "0.8.28",
   defaultNetwork: "hardhat",
+  mocha: {
+    timeout: 600000,
+  },
   networks:{
     sepolia:{
       url: RPC_URL,
